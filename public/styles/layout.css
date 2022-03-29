@@ -6,20 +6,58 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
+/* Box sizing rules */
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  line-height: 1.5em;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/*  main container styling */
+.container {
+  text-align: center;
+  margin: 0 5%;
+  background-color: #f4f1ec;
+}
+
+.highlight-text {
+  font-weight: 600;
+}
+
+.btn {
+  font-family: 'Bungee', cursive;
+  padding: 5px 10px;
+  background-color: #4056a1;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.2em;
+}

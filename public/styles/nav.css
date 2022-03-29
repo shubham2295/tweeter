@@ -1,0 +1,38 @@
+/* ----- navbar style---- */
+nav {
+  height: 120px;
+  width: 100%;
+  background: #4056a1;
+  color: #ffffff;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+nav > span {
+  font-family: 'Bungee', cursive;
+  font-size: 1.5em;
+}
+
+.fa-angles-down {
+  color: red;
+  --fa-bounce-start-scale-x: 1;
+  --fa-bounce-start-scale-y: 1;
+  --fa-bounce-jump-scale-x: 1;
+  --fa-bounce-jump-scale-y: 1;
+  --fa-bounce-land-scale-x: 1;
+  --fa-bounce-land-scale-y: 1;
+  --fa-bounce-rebound: 0;
+}
+
+.navbar-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidetext {
+  margin: 0.8em 0;
+}
