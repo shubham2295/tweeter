@@ -1,4 +1,4 @@
-header {
+.profile {
   height: 400px;
   width: 100%;
   display: flex;
@@ -11,4 +11,5 @@ header {
     rgba(249, 143, 253, 1) 100.2%
   );
   color: #ffffff;
+  margin-top: 120px;
 }

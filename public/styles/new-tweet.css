@@ -4,15 +4,18 @@
   row-gap: 0.5em;
 }
 
+.new-tweet {
+  margin: 2em 0;
+}
 .new-tweet #tweet-text {
   width: 100%;
-  height: 35px;
+  /* height: 60px; */
   border: none;
   outline: 0;
   border-bottom: 2px solid #545149;
   background-color: #f4f1ec;
   resize: none;
-  padding: 0;
+  word-break: break-all;
 }
 #tweet-text::-webkit-input-placeholder {
   font-weight: bold;

@@ -1,0 +1,48 @@
+article {
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+article:hover {
+  box-shadow: 7px 7px 0px rgba(102, 120, 180, 0.8);
+}
+
+.tweet {
+  margin: 1em 0;
+  padding: 0 1.5em;
+}
+
+.tweet-content {
+  text-align: left;
+  font-weight: 600;
+  padding: 0 1.5em;
+}
+
+.tweet-details {
+  font-size: 0.6em;
+  font-weight: 600;
+  padding: 0 1.5em;
+  margin: 0.5em 0 1em 0;
+}
+
+.icons .fa-solid {
+  margin: 0 5px;
+  color: #6678b4;
+}
+
+.fa-solid:hover {
+  color: #c0eda6;
+}
+
+.username {
+  margin: 0 0 0 0.5em;
+}
+.userid {
+  color: #6678b4;
+}
+hr {
+  height: 1px;
+  background-color: black;
+  width: 98%;
+  margin-bottom: 0;
+}

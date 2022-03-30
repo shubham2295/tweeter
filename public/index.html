@@ -13,9 +13,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      type="text/css"
     />
     <!--External fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,12 +28,18 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-block.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+      defer
+    ></script>
   </head>
 
   <body>
@@ -51,7 +55,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="profile">
       <div>
         <img src="./images/profile-hex.png" />
       </div>
@@ -65,10 +69,12 @@
 
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" action="/tweets">
           <label for="tweet-text"></label>
           <textarea
+            cols="70"
+            rows="3"
             name="text"
             id="tweet-text"
             placeholder="What are you humming about?"
@@ -78,14 +84,55 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-
-        <p style="margin-top: 100px">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-          deleniti, numquam dolorem assumenda quidem ex delectus ea, voluptates,
-          aperiam iste praesentium debitis qui maiores doloribus reiciendis?
-          Commodi incidunt quibusdam repellendus.
-        </p>
       </section>
+
+      <article>
+        <header class="flex-spacebetween tweet">
+          <div class="flex-spacebetween">
+            <img src="https://i.imgur.com/73hZDYK.png" />
+            <p class="username">John Doe</p>
+          </div>
+          <p class="userid">@john123</p>
+        </header>
+        <p class="tweet-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel facilis
+          dignissimos ad, ut sed molestias sunt neque animi itaque alias.
+        </p>
+        <hr />
+        <footer class="flex-spacebetween tweet-details">
+          <p>10 Days ago</p>
+          <div class="icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+
+      <article>
+        <header class="flex-spacebetween tweet">
+          <div class="flex-spacebetween">
+            <img src="https://i.imgur.com/73hZDYK.png" />
+            <p class="username">John Doe</p>
+          </div>
+          <p class="userid">@john123</p>
+        </header>
+        <p class="tweet-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel facilis
+          dignissimos ad, ut sed molestias sunt neque animi itaque alias.
+        </p>
+        <hr />
+        <footer>
+          <div class="flex-spacebetween tweet-details">
+            <p>10 Days ago</p>
+            <div>
+              <i class="fa-light fa-flag"></i>
+              <i class="fa-light fa-arrows-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>

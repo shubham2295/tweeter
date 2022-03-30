@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -15,11 +16,6 @@ html {
 /*
  * Global layout stuff
  */
-/* Box sizing rules */
-* {
-  box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
-}
 
 /* Remove default margin */
 body,
@@ -36,6 +32,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   line-height: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
@@ -51,6 +48,16 @@ body {
 
 .highlight-text {
   font-weight: 600;
+}
+
+.red-text {
+  color: red;
+}
+
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
