@@ -5,7 +5,7 @@
 }
 
 .new-tweet {
-  margin: 2em 0;
+  margin-top: 2em;
 }
 .new-tweet #tweet-text {
   width: 100%;
@@ -29,4 +29,8 @@
 
 .counter {
   font-family: 'Bungee', cursive;
+}
+
+.tweets {
+  margin-top: 2em;
 }

@@ -16,6 +16,7 @@ article:hover {
   text-align: left;
   font-weight: 600;
   padding: 0 1.5em;
+  word-break: break-word;
 }
 
 .tweet-details {
