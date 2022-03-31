@@ -1,15 +1,14 @@
-/* ----- navbar style---- */
+/* ----- Navbar style---- */
 nav {
   height: 120px;
   width: 100%;
-  background: #4056a1;
-  color: #ffffff;
+  color: var(--white);
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  position: fixed;
+  position: relative;
   top: 0px;
 }
 
@@ -33,8 +32,16 @@ nav > span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--white);
 }
 
 .sidetext {
   margin: 0.8em 0;
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    background: var(--primary-color);
+    position: fixed;
+  }
 }
