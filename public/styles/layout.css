@@ -17,6 +17,19 @@ html {
  * Global layout stuff
  */
 
+:root {
+  --primary-color: #4056a1;
+  --primary-text-color: #545149;
+  --dark-red: #ff0000;
+  --alert-light-red: #ffcdce;
+  --alert-dark-red: #b91c1c;
+  --white: #ffffff;
+  --light-grey: #f4f1ec;
+  --light-green: #f98ffd;
+  --light-violet: #6678b4;
+  --border-grey: #545149;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -28,8 +41,8 @@ p {
 }
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: var(--primary-text-color);
+  background-color: var(--light-grey);
   font-size: 24px;
   line-height: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
@@ -43,15 +56,17 @@ body {
 .container {
   text-align: center;
   margin: 0 5%;
-  background-color: #f4f1ec;
 }
 
 .highlight-text {
   font-weight: 600;
 }
 
+.header-text {
+  font-size: 1.5em;
+}
 .red-text {
-  color: red;
+  color: var(--dark-red);
 }
 
 .flex-spacebetween {
@@ -69,25 +84,26 @@ body {
 .btn {
   font-family: 'Bungee', cursive;
   padding: 5px 10px;
-  background-color: #4056a1;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--white);
   border: none;
   border-radius: 0.2em;
   text-align: center;
+  cursor: pointer;
 }
 
 #error {
   border-radius: 0.3em;
   font-size: 0.83em;
   margin: 1em 0;
-  color: #b91c1c;
-  background: #ffcdce;
+  color: var(--alert-dark-red);
+  background: var(--alert-light-red);
   display: none;
 }
 
 .btn-bottom {
   border-radius: 50%;
-  color: #b91c1c;
+  color: var(--dark-red);
   height: 4em;
   width: 4em;
   position: fixed;
@@ -95,4 +111,18 @@ body {
   right: 2em;
   z-index: 99;
   display: none;
+}
+
+.content-desk {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .content-desk {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: row;
+  }
 }

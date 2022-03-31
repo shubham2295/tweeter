@@ -1,3 +1,4 @@
+/* ----- tweet-block style---- */
 article {
   border: 2px solid black;
   margin-bottom: 20px;
@@ -28,18 +29,18 @@ article:hover {
 
 .icons .fa-solid {
   margin: 0 5px;
-  color: #6678b4;
+  color: var(--light-violet);
 }
 
-.fa-solid:hover {
-  color: #c0eda6;
+article .fa-solid:hover {
+  color: var(--light-green);
 }
 
 .username {
   margin: 0 0 0 0.5em;
 }
 .userid {
-  color: #6678b4;
+  color: var(--light-violet);
 }
 hr {
   height: 1px;

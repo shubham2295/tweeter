@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//---------Helper functions----------------------------------
+
+//---------User input filtering to stop prevent XSS-----------
 const filterInput = function(str) {
   let p = document.createElement('p');
   $(p).addClass('tweet-content');
@@ -11,6 +14,7 @@ const filterInput = function(str) {
   return p.outerHTML;
 };
 
+//---------Create tweet article using json object-----------
 const createTweetElement = function(tweet) {
 
   let $tweet = $(`<article>
@@ -36,18 +40,17 @@ ${filterInput(tweet.content.text)}
   return $tweet;
 };
 
+//---------Iterating through array of tweets and attaching them to DOM-----------
 const renderTweets = function(tweets) {
-
   for (const tweet of tweets) {
-
     const $tweet = createTweetElement(tweet);
     $('.tweets').prepend($tweet);
-
   }
-
 };
 
+//---------Running script when DOM is ready for manipulation------------
 $(function() {
+
 
   const $form = $('#tweet-form');
   const $formContent = $('#tweet-text');
@@ -61,6 +64,7 @@ $(function() {
     event.preventDefault();
     $error.hide();
 
+    //------Checking for valid form input--------------
     const content = $formContent.val();
     if (content.length > 140) {
       $error.text('Tweet size can not exceed 140 charachter limit.');
@@ -74,6 +78,7 @@ $(function() {
       return;
     }
 
+    //------AJAX Post request to subbmit new tweet using form--------------
     $.ajax({
       type: "POST",
       url: '/tweets',
@@ -86,6 +91,7 @@ $(function() {
     });
   });
 
+  //-------AJAX Get request to get and render new tweets on the page------
   const loadTweet = function() {
     $.ajax('/tweets', { type: "GET" })
       .then(function(tweetsArray) {
@@ -93,16 +99,18 @@ $(function() {
         renderTweets(tweetsArray);
       });
   };
+
+  //-------Initial loading of tweets on first visit--------
   loadTweet();
 
-  //------Navbar button
+  //------Show/Hide button for new tweet area--------------
   $navBtn.on('click', function() {
-    console.log('Button clicked');
     $newTweet.slideToggle('slow', function() {
       $formContent.focus();
     });
   });
 
+  //------Scroll to top button------------------------------
   $(window).scroll(function() {
     const scrollPos = $(document).scrollTop();
     if (scrollPos > 100) {
@@ -115,7 +123,6 @@ $(function() {
 
   $bottomBtn.on('click', function() {
     $(window).scrollTop(0);
-    $formContent.focus();
   });
 
 });
