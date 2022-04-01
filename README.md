@@ -14,11 +14,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Getting Started
 
-1. [Create](https://github.com/shubham2295/tweeter.git) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-5. Go to <http://localhost:8080/> in your browser.
+1. You can access it online [here](https://shubham-tweeter.herokuapp.com/) or can run in your local environment using following instructions.
+2. [Create](https://github.com/shubham2295/tweeter.git) a new repository using this repository as a template.
+3. Clone your repository onto your local device.
+4. Install dependencies using the `npm install` command.
+5. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+6. Go to <http://localhost:8080/> in your browser.
 
 ## Tools and Technologies used
 
