@@ -6,6 +6,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Results
 
+![tweeter-gif](https://github.com/shubham2295/tweeter/blob/master/docs/tweeter.gif)
+
+![tweeter-desktop-home](https://github.com/shubham2295/tweeter/blob/master/docs/desktop_home.PNG)
+
+![tweeter-mobile-home](https://github.com/shubham2295/tweeter/blob/master/docs/mobile_home.png)
+
 ## Getting Started
 
 1. [Create](https://github.com/shubham2295/tweeter.git) a new repository using this repository as a template.
