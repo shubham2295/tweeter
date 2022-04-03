@@ -125,4 +125,7 @@ body {
     display: flex;
     flex-direction: row;
   }
+  #tweet-container {
+    width: 66.66%;
+  }
 }
